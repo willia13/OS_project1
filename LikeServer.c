@@ -1,0 +1,4 @@
+/*
+LikeServer.c
+This process generates random amounts of likes and sends the count to the Primary Likes Server
+*/
