@@ -124,7 +124,6 @@ int LikeServer(int server_number){
     if (exit_code != 0)
       return exit_code;
   }
-  printf("%i", server_number);
   return 0;
 }
 
@@ -170,15 +169,12 @@ void ParentProcess(){
     makeLog(server_nums[times], 0,0,0);
     makeLog(" process created: ", 0,0, 1);
 
-    int stuff = LikeServer(times);
-    if (stuff == 0){
-    //  if (LikeServer(times) == 0){ //if child was successful
+    if (LikeServer(times) == 0){ //if child was successful
       makeLog("LikeServer", 0,0,0);
       makeLog(server_nums[times], 0,0,0);
       makeLog(" process finished: ", 0,0, 1);
     }
     else{ //if child failed
-      printf("%i", stuff);
       makeLog("LikeServer", 0,0,0);
       makeLog(server_nums[times], 0,0,0);
       makeLog(" process failed: ", 0,0, 1);
