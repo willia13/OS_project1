@@ -6,4 +6,5 @@ Then run the executables in order:  ./PrimaryLikesServer   ./ParentProcess
 The PrimaryLikesServer contains the PrimaryLikesServer, while the ParentProcess contains both the ParentProcess and the LikeServer.
 The files will leave their temp files in the /tmp/ directory.
 
-Also after 10 seconds after the ParentProcess ends, the PrimaryLikesServer will automatically end as well.
+The ParentProcess will linger for about 10 seconds after the last LikeServer ends.
+Also after 30 seconds after the ParentProcess ends, the PrimaryLikesServer will automatically end as well.
