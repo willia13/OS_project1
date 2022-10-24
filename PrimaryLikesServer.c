@@ -1,7 +1,7 @@
 /*
 PrimaryLikesServer.c
 
-This process will take input from the 10 Like Servers and compile the data together
+This process will take input from the 10 Like Servers and compile the data together to a log file ./tmp/PrimaryLikesLog
 */
 #include <sys/prctl.h>
 #include <unistd.h>
