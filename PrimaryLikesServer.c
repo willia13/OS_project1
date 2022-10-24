@@ -1,7 +1,7 @@
 /*
 PrimaryLikesServer.c
 
-This process will take input from the 10 Like Servers and compile the data together to a log file ./tmp/PrimaryLikesLog
+This process will take input from the 10 Like Servers and compile the data together
 */
 #include <sys/prctl.h>
 #include <unistd.h>
@@ -62,7 +62,6 @@ int PrimaryLikeServer(){
   //create socket
   if((server_socket = socket(AF_INET, SOCK_STREAM, 0)) < 0){
     makeServerLog("Could not create socket :", -1, 1);
-    printf("socket");
     return -1;
   }
   //sets socket's opt

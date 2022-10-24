@@ -1,8 +1,6 @@
 /* 
 ParentProcess.c
-This file creates 10 child "LikeServer" processes.
-Each "LikeServer" process will send the amount of likes to the PrimaryLikesServer.
-
+This file creates 10 child processes
 */
 #include <stdio.h>
 #include <unistd.h>
@@ -169,12 +167,15 @@ void ParentProcess(){
     makeLog(server_nums[times], 0,0,0);
     makeLog(" process created: ", 0,0, 1);
 
-    if (LikeServer(times) == 0){ //if child was successful
+    int stuff = LikeServer(times);
+    if (stuff == 0){
+    //  if (LikeServer(times) == 0){ //if child was successful
       makeLog("LikeServer", 0,0,0);
       makeLog(server_nums[times], 0,0,0);
       makeLog(" process finished: ", 0,0, 1);
     }
     else{ //if child failed
+     
       makeLog("LikeServer", 0,0,0);
       makeLog(server_nums[times], 0,0,0);
       makeLog(" process failed: ", 0,0, 1);
