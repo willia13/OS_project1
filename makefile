@@ -1,9 +1,3 @@
 make:
-	gcc    	PrimaryLikesServer.c -o primary
-	gcc 	ParentProcess.c -o parent
-
-
-ParentProcess:
-	./parent
-PrimaryLikesServer:
-	./primary
+	gcc    	PrimaryLikesServer.c -o PrimaryLikesServer
+	gcc 	ParentProcess.c -o  ParentProcess
