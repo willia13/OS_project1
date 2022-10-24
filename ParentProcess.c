@@ -1,6 +1,8 @@
 /* 
 ParentProcess.c
-This file creates 10 child processes
+This file creates 10 child "LikeServer" processes.
+Each "LikeServer" process will send the amount of likes to the PrimaryLikesServer.
+
 */
 #include <stdio.h>
 #include <unistd.h>
