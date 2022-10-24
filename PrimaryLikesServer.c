@@ -78,14 +78,12 @@ int PrimaryLikeServer(){
   //binds the socket
   if((bind(server_socket, (struct sockaddr*)&address, sizeof(address)))<0){
     makeServerLog("bind failed :",-1,1);
-    printf("bind");
     return -1;
   }
    
   //starts to listen
   if (listen(server_socket, 3) < 0){
     makeServerLog("Listen failed : ",-1, 1);
-    printf("listen");
     return -1;
   }
   
@@ -94,7 +92,6 @@ int PrimaryLikeServer(){
   //accept 
   if (( socket_1 = accept(server_socket, (struct sockaddr *) &address, (socklen_t *)& address_length))<0){
     makeServerLog("accept failed : ",-1, 1);
-    printf("accept");
     return -1;
   }
   //message recieved is now in new_data
